@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript No1 Yea Yeah yeah</title>
+	<style type="text/css">
+		.calendar {
+			width: 50px;
+			height: 50px;
+			border: 1px solid black;
+			float: left;
+		}
+		.tasrah {
+			clear: left;
+		}
+		#greetings {
+			background-color: green;
+			position: absolute;
+			top: 0;
+			left: auto;
+			right: 0;
+			color: white;
+
+		}
+		#bod2 {
+			background-color: red;
+			position: absolute;
+			top: auto;
+			bottom: 0;
+			left: auto;
+			right: 0;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div id="greetings"></div>
+<div id="bod2"></div>
+	<script>
+	var bod1 = '';
+	var bod2 = '';
+		var hoho = "gonchig"; // string, int, boolean, null, undefined
+		//document.write('Hello People');
+		var nas = window.prompt('Hello, How old are you?');
+		if(nas < 18){
+			bod1 = 'You are too young for watching horror movie';
+		} else {
+			bod1 ='Welcome';
+		} 
+		document.getElementById('greetings').innerHTML = bod1;
+
+
+		//phase 2
+		var week =0;
+		var day = 31;
+		for(var i=1; i<=day; i++){
+			if(week == 7){
+				bod2 = bod2 + '<div class="tasrah"></div>';
+				week = 0;
+			}
+			bod2 = bod2 + '<div class="calendar">'+i+'</div>';
+			week = week +1;
+		} 
+		document.getElementById('bod2').innerHTML = bod2;
+		//phase 3
+		 var d = new Date();
+		var hour = d.getHours();
+
+		
+		if(hour < 12){
+			document.write('Good morning');
+		} else if (hour < 18){
+			document.write('Good afternoon');
+		} else {
+			document.write('untaachee');
+		} 
+		//document.getElementById()
+	</script>
+</body>
+</html>

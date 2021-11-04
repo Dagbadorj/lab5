@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var chono=25;
+        var tuulai=18;
+        var niilber=chono-tuulai;
+        var number;
+        var uldegdel;
+        var hour, min, sec;
+        var bhour, bmin, bsec;
+        number=window.prompt("Тоог оруулна уу?:");
+        number1=parseInt(number);
+        hour=number/niilber;
+        bhour=parseInt(hour);
+        uldegdel=number%niilber;
+        if(uldegdel>0){
+            uldegdel=uldegdel*1000;
+            min=uldegdel/116;
+            bmin=parseInt(min);   
+            uldegdel=uldegdel%116;
+            if(uldegdel>0){
+                uldegdel=uldegdel*100;
+                sec=uldegdel/193;
+                bsec=parseInt(sec);
+            }
+        }
+        document.writeln("<h1>zartsuulsan tsag ni:"+bhour);
+            document.writeln("<h1>zartsuulsan minut ni:"+bmin);
+                document.writeln("<h1>zartsuulsan sekund ni:"+bsec);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
