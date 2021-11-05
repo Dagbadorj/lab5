@@ -1,33 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<DOCTYPE! html>
+<html>
 <head>
-    <script>
-        var number1=window.prompt('ailiin dugaariig oruulna uu.');
-        var niilber=1;
-        var number=parseInt(number1);
-        var i,o,u;
-        var z=3;
-        var x=9;
-        var c=4;
-        if(number<=108){
-                for(i=0;i<=z;i++){
-                    for(o=0; o<=x; o++){
-                        for(u=0; u<=c; u++){
-                            niilber++;
-                            if(niilber==number){break}
-                        }
-                    }   
-            }
-        document.writeln("<h1>orts-"+i);
-        document.writeln("<h1><br>dawhar-"+o);
-        document.writeln("<h1><br>haalga ni-"+u);
-        }else
-        {
-            document.writeln("<h1>manaid tiim ail baihgui ee.");
-        }
-    </script>
+  <title> Байшин </title>
 </head>
 <body>
-    
+<script>
+    var number = window.prompt("Ali ail be?");
+    if(number<=108&&number>=1){ 
+      var orts=parseInt(number/36);
+      number = number-orts*36;
+      var davhar=parseInt(number/4);
+      number=number-davhar*4;
+      orts++;
+      davhar++;
+      if(number==0){
+        number=4;
+        davhar--;
+      }
+      if(davhar==0){
+        davhar=9;
+        orts--;
+      
+      document.write("<h1>"+orts+"-r ortsnii <br>"+davhar+"-r dawhriin <br>"+number+"-r haalga ym baina.");}
+      else
+      document.write("<h1>ail anduurchee");
+      }else
+      {
+      document.write("<h1>tiim ail hezee ch orshihgui ee.");
+      }
+</script>
 </body>
 </html>

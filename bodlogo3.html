@@ -7,7 +7,9 @@
         var niilber=chono-tuulai;
         var number;
         var uldegdel;
-        var hour, min, sec;
+        var hour=0;
+        var min=0;
+        var sec=0;
         var bhour, bmin, bsec;
         number=window.prompt("Тоог оруулна уу?:");
         number1=parseInt(number);
@@ -23,7 +25,14 @@
                 uldegdel=uldegdel*100;
                 sec=uldegdel/193;
                 bsec=parseInt(sec);
+            }else
+            {
+                bsec=0;
             }
+        }else
+        {
+            bmin=0;
+            bsec=0;
         }
         document.writeln("<h1>zartsuulsan tsag ni:"+bhour);
             document.writeln("<h1>zartsuulsan minut ni:"+bmin);

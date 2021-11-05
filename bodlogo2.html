@@ -2,15 +2,16 @@
 <html>
 <body>
 <script>
-    var number=window.prompt('toog oruulaarai.');
-    var copynumber=number;
-    var niilber=0;
-    while(copynumber!= 0)
-    {
-        niilber += copynumber % 10;
-        copynumber = Math.floor(copynumber/10);
+    myString='';
+    var myString=window.prompt('toog oruulaarai.');
+    let niilber=0;
+    var l=myString.length;
+    var i,c;
+    for (i=0;i<l;i++) {
+        c=parseInt(myString.charAt(i));
+        niilber=niilber+c;
     }
-    document.write(number +"-Toonii tsipruudiin niilber ni:" +niilber);
+    document.write("Toonii tsipruudiin niilber ni:" +niilber);
 </script>
 </body>
 </html>
